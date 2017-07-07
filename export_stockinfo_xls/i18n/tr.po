@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* export_stockinfo_xls
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-07 11:37+0000\n"
+"PO-Revision-Date: 2017-07-07 11:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: export_stockinfo_xls
+#: view:wizard.stock.history:export_stockinfo_xls.wizard_form
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: export_stockinfo_xls
+#: view:wizard.stock.history:export_stockinfo_xls.wizard_form
+msgid "Category"
+msgstr "Kategori"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,create_uid:0
+msgid "Created by"
+msgstr "Oluşturan"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,create_date:0
+msgid "Created on"
+msgstr "Oluşturuldu"
+
+#. module: export_stockinfo_xls
+#: model:ir.model,name:export_stockinfo_xls.model_wizard_stock_history
+msgid "Current Stock History"
+msgstr "Şimdiki Stok Geçmişi"
+
+#. module: export_stockinfo_xls
+#: model:ir.ui.menu,name:export_stockinfo_xls.export_excel
+msgid "Current stock in Excel"
+msgstr "Stokları excele aktar"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,display_name:0
+msgid "Display Name"
+msgstr "Görünen Adı"
+
+#. module: export_stockinfo_xls
+#: view:wizard.stock.history:export_stockinfo_xls.wizard_form
+msgid "Export Product with Stock Info"
+msgstr "Ürünlerin Stok bilgisini dışa aktar"
+
+#. module: export_stockinfo_xls
+#: model:ir.actions.act_window,name:export_stockinfo_xls.wizard_act
+msgid "Export product stock in Excel"
+msgstr "Ürün stok bilgisini Excele aktar"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,__last_update:0
+msgid "Last Modified on"
+msgstr "Son güncelleme"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,write_uid:0
+msgid "Last Updated by"
+msgstr "Son güncellenen"
+
+#. module: export_stockinfo_xls
+#: field:wizard.stock.history,write_date:0
+msgid "Last Updated on"
+msgstr "Son güncellenme"
+
+#. module: export_stockinfo_xls
+#: field:product.category,obj:0
+#: field:stock.warehouse,obj:0
+msgid "Obj"
+msgstr "Obj"
+
+#. module: export_stockinfo_xls
+#: model:ir.model,name:export_stockinfo_xls.model_res_partner
+msgid "Partner"
+msgstr "Ortak"
+
+#. module: export_stockinfo_xls
+#: model:ir.model,name:export_stockinfo_xls.model_product_category
+msgid "Product Category"
+msgstr "Ürün Kategorisi"
+
+#. module: export_stockinfo_xls
+#: field:res.partner,supplier_id:0
+msgid "Supplier id"
+msgstr "Tedarikçi id"
+
+#. module: export_stockinfo_xls
+#: model:ir.model,name:export_stockinfo_xls.model_stock_warehouse
+#: view:wizard.stock.history:export_stockinfo_xls.wizard_form
+#: field:wizard.stock.history,category:0
+#: field:wizard.stock.history,warehouse:0
+msgid "Warehouse"
+msgstr "Depo"
+
+#. module: export_stockinfo_xls
+#: view:wizard.stock.history:export_stockinfo_xls.wizard_form
+msgid "Wizard"
+msgstr "Sihirbaz"
+
+#. module: export_stockinfo_xls
+#: view:wizard.stock.history:export_stockinfo_xls.wizard_form
+msgid "or"
+msgstr "ya da"
+
