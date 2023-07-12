@@ -19,6 +19,15 @@
 							</div>
 						</div>
                         <br/>
+						<div class="row">
+							<div>
+								<span>Product Image</span>
+							</div>
+                            <div style="margin-top: 10px;">
+								<input class="image" type="file" id="product-image" required=""/>
+							</div>
+						</div>
+                        <br/>
                         <div class="row">
 							<div>
 								<span>Internal Reference</span>
@@ -78,6 +87,14 @@
                                     									</t>
 
 								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div>
+								<span>Barcode</span>
+							</div>
+							<div style="margin-top: 10px;">
+								<input class="barcode" type="text" t-model="state.barcodeValue"/>
 							</div>
 						</div>
 					</main>

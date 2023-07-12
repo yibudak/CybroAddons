@@ -13,7 +13,6 @@ Company
 Credits
 -------
 * Developers: 	Cybrosys Techno Solutions odoo@cybrosys.com
-                Version 15: Sreerag E @cybrosys
                 Version 16: Gayathri V @cybrosys
 
 Contacts

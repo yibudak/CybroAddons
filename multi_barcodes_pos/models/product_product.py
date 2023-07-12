@@ -23,7 +23,6 @@
 
 from odoo import models, fields, api
 from odoo.osv import expression
-from odoo.osv.expression import OR
 
 
 class ProductProduct(models.Model):
@@ -46,20 +45,6 @@ class ProductProduct(models.Model):
             'template_multi': self.product_tmpl_id.id
         })
         return res
-
-    @api.model
-    def _name_search(self, name, args=None, operator='ilike', limit=100,
-                     name_get_uid=None):
-        args = args or []
-        domain = []
-        if name:
-            domain = ['|', '|', ('name', operator, name),
-                      ('default_code', operator, name),
-                      '|', ('barcode', operator, name),
-                      ('product_multi_barcodes', operator, name)]
-        product_id = self._search(expression.AND([domain, args]), limit=limit,
-                                  access_rights_uid=name_get_uid)
-        return self.browse(product_id).name_get()
 
 
 class ProductTemplate(models.Model):
@@ -88,14 +73,17 @@ class ProductTemplate(models.Model):
 
 class ProductMultiBarcode(models.Model):
     _name = 'multi.barcode.products'
+    _description = 'For creating multiple Barcodes for products'
 
     multi_barcode = fields.Char(string="Barcode",
                                 help="Provide alternate barcodes for this product")
     product_multi = fields.Many2one('product.product')
     template_multi = fields.Many2one('product.template')
 
+    _sql_constraints = [('field_unique', 'unique(multi_barcode)', 'Existing barcode is not allowed !'), ]
+
     def get_barcode_val(self, product):
-        # returns barcode of record in self and product id
+        """returns barcode of record in self and product id"""
         return self.multi_barcode, product
 
 
