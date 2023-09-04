@@ -76,7 +76,7 @@ class PurchaseOrderAdvancePayment(models.TransientModel):
                                  default=_default_product_id, help='To add the down payment product')
     deduct_down_payments = fields.Boolean('Deduct down payments', default=False,
                                           help='To mention the down payment amount deduct to next invoice')
-    amount = fields.Float('Down Payment Amount', digits='Account',
+    amount = fields.Float('Down Payment Amount', digits=(16,2),
                           help="The percentage of amount to be bill in advance, taxes excluded.")
     currency_id = fields.Many2one('res.currency', string='Currency',
                                   default=_default_currency_id, help='Default company currency')

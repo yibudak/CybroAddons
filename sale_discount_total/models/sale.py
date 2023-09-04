@@ -22,7 +22,6 @@
 #############################################################################
 
 from odoo import api, fields, models, _
-import odoo.addons.decimal_precision as dp
 from odoo.exceptions import ValidationError
 
 
@@ -55,7 +54,7 @@ class SaleOrder(models.Model):
         states={'draft': [('readonly', False)], 'sent': [('readonly', False)]},
         default='percent')
     discount_rate = fields.Float('Discount Rate',
-                                 digits=dp.get_precision('Account'),
+                                 digits=(16,2),
                                  readonly=True,
                                  states={'draft': [('readonly', False)],
                                          'sent': [('readonly', False)]})
@@ -70,7 +69,7 @@ class SaleOrder(models.Model):
                                    track_visibility='always')
     amount_discount = fields.Monetary(string='Discount', store=True,
                                       readonly=True, compute='_amount_all',
-                                      digits=dp.get_precision('Account'),
+                                      digits=(16,2),
                                       track_visibility='always')
 
     @api.onchange('discount_type', 'discount_rate', 'order_line')

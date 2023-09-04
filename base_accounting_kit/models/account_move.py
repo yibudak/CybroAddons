@@ -25,7 +25,6 @@ import ast
 from dateutil.relativedelta import relativedelta
 
 from odoo import api, fields, models, _
-from odoo.addons.base.models import decimal_precision as dp
 from odoo.exceptions import UserError
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT as DF
 
@@ -91,7 +90,7 @@ class AccountInvoiceLine(models.Model):
                                  store=True)
     asset_mrr = fields.Float(string='Monthly Recurring Revenue',
                              compute='_get_asset_date',
-                             readonly=True, digits='Account',
+                             readonly=True, digits=(16,2),
                              store=True)
 
     @api.depends('asset_category_id', 'move_id.invoice_date')
