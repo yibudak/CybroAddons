@@ -20,24 +20,18 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 ###################################################################################
-
-from odoo import models, fields, api
-
-
-class SendGridAPI(models.Model):
-    _inherit = "ir.config_parameter"
-
-    company_id = fields.Many2one('res.company', string="Company ID")
-
-    @api.model
-    def create(self, vals_list):
-        """
-        function is used for auto filling company
-        details to company_id
-
-        """
-        res = super(SendGridAPI, self).create(vals_list)
-        res.company_id = self.env.company.id
-        return res
+from odoo import models, fields
 
 
+class SendgridEmailTemplate(models.Model):
+    """Creates the model sendgrid.email.template to create the email templates
+    that needs to be sent through the send grid"""
+    _name = "sendgrid.email.template"
+    _rec_name = "temp_name"
+    _description = "Sendgrid Email Template"
+
+    temp_name = fields.Char(string="Template Name", required=True)
+    ver_subject = fields.Char(string="Template Subject", required=True)
+    temp_cont = fields.Html(string="Template Content",
+                            help="content convert to html code", translate=True,
+                            sanitize=False)
